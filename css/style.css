@@ -1,107 +1,114 @@
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
 }
 
-main {
-  position: absolute;
-  width: 100%;
-  height: 457px;
-  left: 0px;
-  top: 0px;
+.branding {
+  padding: 80px;
   background-image: url('../img/people_congress.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+}
+
+.container {
+  padding-right: 65px;
+  padding-left: 65px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top-nav {
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-between;
+  position: relative;
+  top: -40px;
+}
+
+.nav-section > ul {
+  display: flex;
+}
+
+.nav-section > ul > li {
+  list-style: none;
+  padding-right: 30px;
+}
+
+.btn-donate {
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+  border-style: none;
+}
+
+.btn-top {
+  margin-top: -10px;
 }
 
 .discover-dropDown {
   font-weight: 500;
-  padding: 20px;
-}
-
-header {
-  margin-left: 12.5%;
-  margin-right: 12.5%;
-}
-
-header > h3 {
-  text-align: center;
-  margin-top: -55px;
-}
-
-/*ul {
-  float: right;
-  margin-top: -55px;
-  padding: 10px;
-  list-style: none;
-}*/
-
-ul {
-  display: flex;
-  float: right;
-  justify-content: space-around;
-  margin-top: -39.5px;
-  list-style: none;
-}
-
-li {
-  margin-right: 50px;
-  float: left;
-}
-
-.txt-background {
-  margin-top: 10%;
-}
-
-.txt-background > h4 {
-  font-size: 30px;
-  font-weight: bold;
+  text-emphasis: none;
 }
 
 .txt-background > p {
-  color: #fafafa;
+  padding: 10px 0;
 }
 
-#btn-donate {
-  padding: 10px;
-  border-radius: 7px;
-  margin-top: 10px;
+.green-color {
   background-color: #69d380;
-  color: white;
-  border-style: none;
 }
 
-#donate-btn {
-  padding: 10px;
-  border-radius: 7px;
+.black-color {
   background-color: #000000;
-  border-style: none;
-  font-size: small;
-  margin-top: -8px;
 }
 
-header > p {
-  margin-top: 6.5%;
-  font-size: 15px;
+.note {
+  position: relative;
+  bottom: -70px;
 }
 
-.container {
+.container-fluid {
   display: flex;
-  margin-top: 40%;
-  margin-left: 18.5%;
-  margin-right: 18.5%;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border: 2px solid red;
+  margin-top: 80px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.container-a {
+.container-wide {
+  padding-top: 30px;
+  padding-bottom: 90px;
+  border: 2px solid red;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.section-text {
+  width: 300px;
+  text-align: justify;
+}
+
+.slider {
   display: flex;
-  flex-direction: row-reverse;
-  margin-top: 10%;
-  justify-content: center;
-  background-color: #fbf8f6;
-  padding: 90px;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+  border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  width: 80%;
 }
 
 a {
   text-decoration: none;
-  display: inline-block;
   padding: 8px 16px;
 }
 
@@ -113,69 +120,31 @@ a:hover {
 .previous {
   background-color: #f1f1f1;
   color: black;
-  position: absolute;
-  left: 7.5%;
-  margin-top: 90px;
 }
 
 .next {
   background-color: #4caf50;
   color: white;
-  position: absolute;
-  right: 10%;
-  margin-top: 90px;
 }
 
 .round {
   border-radius: 50%;
 }
 
-.container-b {
-  display: flex;
-  margin-top: 8%;
-  align-items: center;
-  margin-left: 18.5%;
-  margin-right: 18.5%;
-  padding-bottom: 90px;
-}
-
-.img-section {
-  width: auto;
-}
-
-.section-text-right {
-  margin-left: auto;
-  width: 300px;
-}
-
-.section-text-left {
-  margin-right: auto;
-  width: 300px;
-}
-
-.section-text-left > h4 {
-  text-align: center;
-}
-
-.section-text-right > h4 {
-  text-align: center;
-}
-
-section {
-}
-
 footer {
-  height: 120px;
+  padding: 80px;
   background-color: #c4c4c4;
-  margin-top: 5%;
+  margin-top: 100px;
 }
 
 .fb-tw-ins-in {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
 }
 
 .fab {
   padding-right: 50px;
+}
+
+@media (max-width: 480px) {
 }
