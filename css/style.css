@@ -22,7 +22,6 @@ body {
 
 .top-nav {
   display: flex;
-  border: 2px solid red;
   justify-content: space-between;
   position: relative;
   top: -40px;
@@ -53,6 +52,10 @@ body {
   text-emphasis: none;
 }
 
+.discover-unstyled {
+  color: #ffffff;
+}
+
 .txt-background > p {
   padding: 10px 0;
 }
@@ -75,7 +78,6 @@ body {
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: space-evenly;
-  border: 2px solid red;
   margin-top: 80px;
   margin-left: 10%;
   margin-right: 10%;
@@ -84,10 +86,10 @@ body {
 .container-wide {
   padding-top: 30px;
   padding-bottom: 90px;
-  border: 2px solid red;
   margin-top: 100px;
   margin-bottom: 100px;
   position: relative;
+  background-color: #fbf8f6;
 }
 
 .section-text {
@@ -101,7 +103,6 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   align-items: center;
-  border: 2px solid red;
   position: absolute;
   top: 50%;
   width: 80%;
