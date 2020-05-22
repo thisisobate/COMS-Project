@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Info Tracker - Admin</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="brand">Student Info Tracker</span>
+      <div style="font-size: 20px;">Welcome, <b>Admin</b></div>
+    </header>
+
+    <div id="modal-bg">
+      <div class="modal">
+        <h2>Student Information</h2>
+        <div id="modal-overlay-loader"><img src="img/spinner.gif" alt="" /></div>
+        <div class="cart-modal-body">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter name" />
+
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+
+          <label for="canEdit">Edit access</label>
+          <select id="canEdit">
+            <option value="true">Can edit</option>
+            <option value="false">Cannot edit</option>
+          </select>
+
+          <div style="margin-top: 20px;">
+            <button id="addAdmin-but" class="but" onclick="addAdmin()">ADD</button>
+            <button id="editAdmin-but" class="but" onclick="editAdmin()">EDIT</button>
+            <button id="deleteAdmin-but" class="but" onclick="deleteAdmin()">DELETE</button>
+            <button class="but1" onclick="closeAdminModal()">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; height: 100vh;">
+      <aside>
+        <ul>
+          <a href="/student">
+            <li>Overview</li>
+          </a>
+          <a href="/student/admin">
+            <li class="active">Admins</li>
+          </a>
+          <a href="/student/login">
+            <li>Log out</li>
+          </a>
+        </ul>
+      </aside>
+
+      <main>
+        <h2>Admins <button class="but" onclick="showAdminModal()">ADD ADMIN</button></h2>
+
+        <div class="products-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Edit access</th>
+              </tr>
+            </thead>
+            <tbody id="admins-table">  </tbody>
+          </table>
+
+          <img id="main-loader" src="img/spinner.gif" alt="" />
+        </div>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

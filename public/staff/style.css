@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* ------------------------------------- */
+/*             Global                   */
+/* ------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.green {
+  color: #23a823;
+  font-weight: 600;
+}
+
+.red {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+td,
+th {
+  border: 0px solid #e0e0e0;
+  text-align: left;
+  height: 60px;
+  padding-left: 15px;
+}
+
+th {
+  background: rgba(39, 174, 95, 0.6);
+}
+
+td {
+  cursor: pointer;
+}
+
+td:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+td img {
+  display: block;
+  height: 40px;
+  margin-right: 20px;
+}
+
+tr {
+  border-bottom: 1px solid #cacaca;
+}
+
+tr:hover {
+  background: rgba(69, 93, 121, 0.05);
+}
+
+/* ------------------------------------- */
+/*             ModaL                    */
+/* ------------------------------------- */
+
+#modal-bg {
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  overflow-y: scroll;
+}
+
+.modal {
+  position: relative;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  width: 500px;
+  padding: 40px 20px;
+  margin-top: 80px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#modal-overlay-loader {
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#modal-overlay-loader img {
+  display: block;
+  margin: 0 auto;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.modal .but {
+  margin-right: 10px;
+}
+
+#modalImg {
+  display: block;
+  width: 100%;
+}
+
+/* ------------------------------------- */
+/*             Buttons                   */
+/* ------------------------------------- */
+
+.but,
+.but1 {
+  background: #27ae60;
+  color: #f5f7fa;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.but1 {
+  background: #ffffff;
+  color: #3371b9;
+}
+
+.but:hover {
+  background: #2980b9;
+}
+
+/* ------------------------------------- */
+/*             Header                    */
+/* ------------------------------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  background: #27ae60;
+  color: #f5f7fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  font-size: 18 px;
+  z-index: 5;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin: 0 10px;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* ------------------------------------- */
+/*             Login                     */
+/* ------------------------------------- */
+
+.login-jumbo {
+  background: url('img/happy-girl.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 60vw;
+}
+
+.login-jumbo::after {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  content: 'Aguluzigbo COMMS';
+  font-size: 70px;
+  font-weight: 600;
+  color: #e8edf5;
+  background: rgba(39, 174, 95, 0.8);
+  width: 60vw;
+  height: 100%;
+  z-index: 90;
+}
+
+.login-box {
+  width: 30vw;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 10px 0 20px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #c7c7c7;
+}
+
+.login-box .but {
+  height: 40px;
+  cursor: pointer;
+}
+
+.login-box .but img {
+  display: none;
+}
+
+.login-box .loading {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+  cursor: pointer;
+}
+
+.login-box .loading img {
+  display: block;
+  height: 40px;
+}
+
+.show-password {
+  display: flex;
+  width: 50%;
+}
+
+/* ------------------------------------- */
+/*             Dashboard                 */
+/* ------------------------------------- */
+
+aside {
+  background: #e8edf5;
+  color: #3b3b3b;
+  width: 15%;
+  height: 100vh;
+  padding: 100px 0 0;
+  box-sizing: border-box;
+}
+
+aside li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 0 20px 40px;
+  border-bottom: 1px solid #c2ccd6;
+}
+
+aside li:hover,
+aside .active {
+  background: #ffffff;
+  border-left: 10px solid #27ae60;
+  padding-left: 30px;
+  border-bottom: 0;
+}
+
+main {
+  background: #fcfcfc;
+  padding: 100px 40px 0;
+  width: 85%;
+  overflow-y: scroll;
+}
+
+main h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+#main-loader {
+  display: none;
+  margin: 80px auto;
+}
+
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.jumbotron .box {
+  background: rgba(39, 174, 95, 0.2);
+  width: 32%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.jumbotron .box h1 {
+  color: #27ae60;
+  font-size: 80px;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}

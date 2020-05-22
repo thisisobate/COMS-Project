@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>COMS - Admin</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="brand">Aguluzigbo COMMS</span>
+      <div style="font-size: 20px;">Welcome, <b>Administrator</b></div>
+    </header>
+
+    <div id="modal-bg">
+      <div class="modal">
+        <h2>Citizen Information</h2>
+        <div id="modal-overlay-loader">
+          <img src="img/spinner.gif" alt="" />
+        </div>
+        <div class="cart-modal-body">
+          <img src="" id="modalImg" />
+
+          <label for="img">Image</label>
+          <input
+            type="file"
+            id="img"
+            placeholder="Upload image"
+            accept="image/*"
+          />
+
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter name" />
+
+          <label for="email">Occupation</label>
+          <input type="text" id="email" placeholder="Enter Occupation" />
+
+          <label for="phone">Phone number</label>
+          <input type="number" id="phone" placeholder="Enter phone number" />
+
+          <label for="address">Kindred</label>
+          <input type="text" id="address" placeholder="Enter Address" />
+
+          <label for="unit">Village</label>
+          <select id="unit" name="" id="">
+            <option value="umuolu">Umuolu</option>
+            <option value="Agulu Nta">Agulu Nta</option>
+          </select>
+
+          <label for="employmentStatus">Citizenship status</label>
+          <select id="employmentStatus">
+            <option value="indigene">Indigene</option>
+            <option value="non-indigene">Non-indigene</option>
+          </select>
+
+          <label for="level">Age</label>
+          <input type="number" id="level" placeholder="Enter Level" />
+
+          <div style="margin-top: 20px;">
+            <button id="addStaff-but" class="but" onclick="addStaff()">
+              ADD
+            </button>
+            <button id="editStaff-but" class="but" onclick="editStaff()">
+              EDIT
+            </button>
+            <button id="deleteStaff-but" class="but" onclick="deleteStaff()">
+              DELETE
+            </button>
+            <button class="but1" onclick="closeModal()">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; height: 100vh;">
+      <aside>
+        <ul>
+          <a href="/staff">
+            <li class="active">Overview</li>
+          </a>
+          <a href="/staff/admin">
+            <li>Admins</li>
+          </a>
+          <a href="/staff/login">
+            <li>Log out</li>
+          </a>
+        </ul>
+      </aside>
+
+      <main>
+        <h2>
+          Overview
+          <div>
+            <button class="but" onclick="showStaffModal()">ADD CITIZEN</button>
+            <button class="but" id="create_pdf">Download Record</button>
+          </div>
+        </h2>
+
+        <div class="jumbotron">
+          <div class="box">
+            <p>Total population</p>
+            <h1 id="noOfStaffs">0</h1>
+          </div>
+          <div class="box">
+            <p>No of admins</p>
+            <h1 id="noOfAdmins">0</h1>
+          </div>
+          <div class="box">
+            <p>No of Indigenes</p>
+            <h1 id="noOfVerifiedStaff">0</h1>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <input
+            type="text"
+            id="myInput"
+            onkeyup="myFunction()"
+            placeholder="Search for names.."
+          />
+        </div>
+
+        <div class="products-table" id="table-view">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Occupation</th>
+                <th>Phone</th>
+                <th>Kindred</th>
+                <th>Village</th>
+                <th>Status</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody id="staffs-table"></tbody>
+          </table>
+
+          <img id="main-loader" src="img/spinner.gif" alt="" />
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

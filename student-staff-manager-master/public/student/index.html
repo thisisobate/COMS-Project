@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Info Tracker - Admin</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="brand">Student Info Tracker</span>
+      <div style="font-size: 20px;">Welcome, <b>Admin</b></div>
+    </header>
+
+    <div id="modal-bg">
+      <div class="modal">
+        <h2>Student Information</h2>
+        <div id="modal-overlay-loader"><img src="img/spinner.gif" alt="" /></div>
+        <div class="cart-modal-body">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter name" />
+
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+
+          <label for="regNo">Registration number</label>
+          <input
+            type="text"
+            id="regNo"
+            placeholder="Enter registration number"
+          />
+
+          <label for="faculty">Faculty</label>
+          <select id="faculty" name="" id="">
+            <option value="enginnering">Enginnering</option>
+            <option value="social science">Social science</option>
+            <option value="management science">Management science</option>
+          </select>
+
+          <label for="department">Department</label>
+          <select id="department" name="" id="">
+            <option value="Computer science">Computer science</option>
+            <option value="Computer engineering">Computer engineering</option>
+          </select>
+
+          <label for="yearOfEntry">Year of entry</label>
+          <input
+            type="text"
+            id="yearOfEntry"
+            placeholder="Enter date of entry"
+          />
+
+          <label for="yearOfGrad">Year of graduation</label>
+          <input
+            type="text"
+            id="yearOfGrad"
+            placeholder="Enter date of graduation"
+          />
+
+          <label for="feesStatus">School fess status</label>
+          <select id="feesStatus">
+            <option value="paid">Paid</option>
+            <option value="not paid">Not paid</option>
+          </select>
+
+          <label for="gradStatus">Graduation status</label>
+          <select id="gradStatus">
+            <option value="graduated">Graduated</option>
+            <option value="pending">On going</option>
+          </select>
+
+          <div style="margin-top: 20px;">
+            <button id="addStudent-but" class="but" onclick="addStudent()">ADD</button>
+            <button id="editStudent-but" class="but" onclick="editStudent()">EDIT</button>
+            <button id="deleteStudent-but" class="but" onclick="deleteStudent()">DELETE</button>
+            <button class="but1" onclick="closeModal()">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; height: 100vh;">
+      <aside>
+        <ul>
+          <a href="/student">
+            <li class="active">Overview</li>
+          </a>
+          <a href="/student/admin">
+            <li>Admins</li>
+          </a>
+          <a href="/student/login">
+            <li>Log out</li>
+          </a>
+        </ul>
+      </aside>
+
+      <main>
+        <h2>Overview <button class="but" onclick="showStudentModal()">ADD STUDENT</button></h2>
+
+        <div class="jumbotron">
+          <div class="box">
+            <p>No of students</p>
+            <h1 id="noOfStudents">0</h1>
+          </div>
+          <div class="box">
+            <p>No of admins</p>
+            <h1 id="noOfAdmins">0</h1>
+          </div>
+          <div class="box">
+            <p>No of verified students</p>
+            <h1 id="noOfVerifiedStudent">0</h1>
+          </div>
+        </div>
+
+        <div class="products-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Reg No</th>
+                <th>Department</th>
+                <th>Faculty</th>
+                <th>Year of Entry</th>
+                <th>Year of Grad</th>
+                <th>Level</th>
+                <th>Tracked</th>
+                <th>Fees status</th>
+                <th>Gradc status</th>
+              </tr>
+            </thead>
+            <tbody id="students-table">  </tbody>
+          </table>
+
+          <img id="main-loader" src="img/spinner.gif" alt="" />
+        </div>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
