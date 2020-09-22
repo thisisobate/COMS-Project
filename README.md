@@ -2,4 +2,4 @@
 
 This is a community management system
 
-You can view the live project <a href="https://aguluzigbo.herokuapp.com/">here</a>
+You can view the live project <a href="https://aguluzigbo.herokuapp.com/staff/login">here</a>
